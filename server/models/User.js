@@ -3,8 +3,28 @@ const Schema = mongoose.Schema
 
 const userSchema = new Schema(
   {
-    username: String,
-    password: String,
+    accountNumber: String,
+    username: {
+      type: String,
+      required: true,
+    },
+    password: {
+      type: String,
+      required: true
+    },
+    profilePictureUrl: {
+      type: String,
+      deault: 'placeAssetHere'
+    },
+    email: {
+      type: String,
+      default: "testUser@gmail.com"
+    },
+    pictureHashes: Array,
+    bio: String,
+    dob: String,
+    coverPictureUrl: String,
+    verified: false
   },
   {
     timestamps: {

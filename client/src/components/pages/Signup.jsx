@@ -22,6 +22,12 @@ export default function Signup(props) {
       username: state.username,
       name: state.name,
       password: state.password,
+      accountNumber: "Must Submit when ehtereum wallet intergration is on",
+      profilePictureUrl: "www.fcebook.cmo",
+      email: state.email,
+      pictureHashes: "29343903",
+      bio: state.bio,
+      dob: state.dob
     }
     api
       .signup(data)
